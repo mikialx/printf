@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
+ * _printf - clone of the function printf in stdio.h
+ * @format: the string to be printed along with format specifiers preceded by %
  *
+ * Return: the number of characters printed
  */
 
 int _printf(const char *format, ...)
@@ -27,26 +30,8 @@ int _printf(const char *format, ...)
 			char_count++;
 			break;
 		}
-		switch (format[i + 1])
-		{
-			case 'c':
-				_putchar(va_arg(ap, int));
-				char_count++;
-				break;
-			case 's':
-				char_count += print_str(va_arg(ap, char*));
-				break;
-			default:
-				char_count++;
-				if (format[i + 1] == '%')
-				{
-					_putchar('%');
-					i++;
-					continue;
-				}
-				_putchar(format[i]);
-				_putchar(format[i + 1]);
-		}
+
+		char_count += get_printing_func(format[i + 1], &ap);
 		i++;
 	}
 	return (char_count);
