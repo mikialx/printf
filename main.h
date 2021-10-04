@@ -6,6 +6,8 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_str(char *str);
+int put_str(char *str);
+int put_int(int n);
+int get_printing_func(char a, va_list *ap);
 
 #endif /* _PRINTF_MAIN_H */
