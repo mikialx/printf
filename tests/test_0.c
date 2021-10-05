@@ -14,5 +14,8 @@ int main(void)
 
 	printf("x = %d\n", x);
 	printf("y = %d\n", y);
+
+	_printf("rot13 string: %R\n", "Hello, World");
+
 	return (0);
 }

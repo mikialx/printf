@@ -8,7 +8,7 @@
  */
 int put_str(char *str)
 {
-	int i = 0;
+	int i;
 
 	for (i = 0; str != NULL && str[i] != 0; i++)
 	{

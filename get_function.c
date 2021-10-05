@@ -11,12 +11,25 @@
  */
 int get_printing_func(char a, va_list *ap)
 {
+	char *s, *ss;
+	int x;
+
 	if (a == 'c')
 		return (_putchar(va_arg(*ap, int)));
 	else if (a == 's')
 		return (put_str(va_arg(*ap, char*)));
 	else if (a == 'i' || a == 'd')
 		return (put_int(va_arg(*ap, int)));
+	else if (a == 'R')
+	{
+		ss = va_arg(*ap, char *);
+		s = malloc(sizeof(char) * _strlen(ss));
+		s = _strcpy(ss);
+
+		x = put_rot13(s);
+
+		return (x);
+	}
 
 	/**
 	 * If all if's fail, just print the passed character without considering
