@@ -24,10 +24,11 @@ int get_printing_func(char a, va_list *ap)
 	{
 		ss = va_arg(*ap, char *);
 		s = malloc(sizeof(char) * _strlen(ss));
-		s = _strcpy(ss);
+		_strcpy(s, ss);
 
 		x = put_rot13(s);
 
+		free(s);
 		return (x);
 	}
 

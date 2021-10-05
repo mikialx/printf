@@ -12,7 +12,7 @@ int put_int(int n);
 int get_printing_func(char a, va_list *ap);
 int put_rot13(char *s);
 char *rot13(char *s);
-char *_strcpy(char *src);
 int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 
 #endif /* _PRINTF_MAIN_H */
