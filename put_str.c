@@ -15,5 +15,11 @@ int put_str(char *str)
 		_putchar(str[i]);
 	}
 
+	if (str == NULL)
+	{
+		put_str("(null)");
+		return (6);
+	}
+
 	return (i);
 }
