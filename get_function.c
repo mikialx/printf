@@ -33,9 +33,10 @@ int get_printing_func(char a, va_list *ap)
 	}
 
 	/**
-	 * If all if's fail, just print the passed character without considering
-	 * it as a format specifier
+	 * If all if's fail, just print % and the passed character without
+	 * considering it as a format specifier
 	 */
+	 _putchar('%');
 	_putchar(a);
-	return (1); /* Since the number of characters printed is 1 only */
+	return (2); /* Since the number of characters printed is 2 only */
 }
