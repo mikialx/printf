@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 
 		if (format[i + 1] == '\0')
 		{
-			return(-1);
+			return (-1);
 		}
 
 		char_count += get_printing_func(format[i + 1], &ap);
