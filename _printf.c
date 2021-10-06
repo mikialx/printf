@@ -15,7 +15,10 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	for (i = 0; format != NULL && format[i] != 0; i++)
+	if (format == NULL)
+		return (-1);
+
+	for (i = 0; format[i] != 0; i++)
 	{
 		if (format[i] != '%')
 		{
@@ -28,7 +31,7 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 			char_count++;
-			break;
+			return(-1);
 		}
 
 		char_count += get_printing_func(format[i + 1], &ap);
