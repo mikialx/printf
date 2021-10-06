@@ -37,6 +37,10 @@ int get_printing_func(char a, va_list *ap)
 	 * considering it as a format specifier
 	 */
 	 _putchar('%');
+	 if (a == '%')
+	 {
+		 return (1); /* Only % will be printed if a is % */
+	 }
 	_putchar(a);
 	return (2); /* Since the number of characters printed is 2 only */
 }
