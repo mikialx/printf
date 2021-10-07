@@ -6,10 +6,10 @@
  *
  * Return: the number of characters printed or the number of digits in @n
  */
-int put_int(int n)
+int put_int(long n)
 {
-	int i = 1; /* Holds how many digits n has */
-	int char_count = 0;
+	long i = 1; /* Holds how many digits n has */
+	long char_count = 0;
 
 	/**
 	 * if n is zero, just print zero

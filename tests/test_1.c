@@ -10,4 +10,6 @@ int main(void)
 
 	printf("x = %d\n", x);
 	printf("y = %d\n", y);
+
+	return (0);
 }

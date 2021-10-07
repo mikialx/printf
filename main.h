@@ -8,7 +8,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int put_str(char *str);
-int put_int(int n);
+int put_int(long n);
 int get_printing_func(char a, va_list *ap);
 int put_rot13(char *s);
 char *rot13(char *s);
