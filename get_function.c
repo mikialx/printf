@@ -20,6 +20,8 @@ int get_printing_func(char a, va_list *ap)
 		return (put_str(va_arg(*ap, char*)));
 	else if (a == 'i' || a == 'd')
 		return (put_int(va_arg(*ap, int)));
+	else if (a == 'b')
+		return (put_binary((unsigned int) va_arg(*ap, int)));
 	else if (a == 'R')
 	{
 		ss = va_arg(*ap, char *);

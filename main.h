@@ -14,5 +14,6 @@ int put_rot13(char *s);
 char *rot13(char *s);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
+int put_binary(unsigned int n);
 
 #endif /* _PRINTF_MAIN_H */
