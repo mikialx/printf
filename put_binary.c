@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
+ * put_binary - converts @n to binary and prints it
+ * @n: number to be converted to binary
  *
+ * Return: passes the binary version of @n to put_int to print it
  */
 
 int put_binary(unsigned int n)
