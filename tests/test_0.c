@@ -3,6 +3,7 @@
 
 int main(void)
 {
+	/* Tests for when string, character and %% are passed */
 	int x = _printf("Hello, %%%s%c%c%c\n", "World", '!', '\n', '9');
 	int y = printf("Hello, %%%s%c%c%c\n", "World", '!', '\n', '9');
 
